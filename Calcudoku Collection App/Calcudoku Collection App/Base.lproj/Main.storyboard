@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f4u-SW-EhF">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="5sL-iS-rPQ">
+            <objects>
+                <viewController title="About" id="syd-RM-0Q1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mmO-eb-bJc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB5-Ok-dQ4">
+                                <rect key="frame" x="20" y="159" width="353" height="215"/>
+                                <string key="text">    聪明格(Calcudoku)是一种数字游戏，又被称作升级版的数独。它在数学上的要求比数独要高得多。聪明格把数独规则与加减乘除四则运算相结合，使大脑在各种谜题中来回穿梭。     本APP基于网站https://krazydad.com/inkies的数据实现了一个简易的聪明格题库，分为4x4，5x5，6x6三个难度。     感谢Krazydad网站提供的支持！</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7yH-Ss-Rux"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7yH-Ss-Rux" firstAttribute="trailing" secondItem="xB5-Ok-dQ4" secondAttribute="trailing" constant="20" id="8Iv-E0-wNq"/>
+                            <constraint firstItem="xB5-Ok-dQ4" firstAttribute="top" secondItem="7yH-Ss-Rux" secondAttribute="top" constant="100" id="Z0V-co-KqJ"/>
+                            <constraint firstItem="xB5-Ok-dQ4" firstAttribute="leading" secondItem="7yH-Ss-Rux" secondAttribute="leading" constant="20" id="ekD-XF-2EQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="eyes" catalog="system" selectedImage="eyes" id="hfg-nc-PFf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ScT-3L-fVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228.24427480916029" y="559.85915492957747"/>
+        </scene>
+        <!--5x5-->
+        <scene sceneID="Sm8-iv-nxz">
+            <objects>
+                <tableViewController title="5x5" id="2bR-he-buf" customClass="MyTableViewController" customModule="Calcudoku_Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="llx-DM-nek">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="linkColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="first" textLabel="mAw-Id-G8r" imageView="kkO-0d-yFP" style="IBUITableViewCellStyleDefault" id="oji-AV-LBO">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oji-AV-LBO" id="371-tq-VyA">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAw-Id-G8r">
+                                            <rect key="frame" x="59" y="0.0" width="295.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="rectangle.portrait.and.arrow.right" catalog="system" id="kkO-0d-yFP">
+                                            <rect key="frame" x="20.166666666666664" y="11.666666666666664" width="23.666666666666668" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="eQC-0T-d0b" kind="show" identifier="id1" id="gj0-5a-noY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2bR-he-buf" id="wvz-vA-KSm"/>
+                            <outlet property="delegate" destination="2bR-he-buf" id="9pp-L6-lJH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Calcudoku" id="9Hn-hI-9wz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6z-2M-UvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-1015"/>
+        </scene>
+        <!--Second Table View Controller-->
+        <scene sceneID="hui-mo-Rxa">
+            <objects>
+                <tableViewController id="eQC-0T-d0b" customClass="SecondTableViewController" customModule="Calcudoku_Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="nfD-FP-SBG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" name="AccentColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="second" textLabel="L2y-OS-83b" imageView="e3z-MX-1C8" style="IBUITableViewCellStyleDefault" id="zTp-0u-7cv">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zTp-0u-7cv" id="miC-0X-48u">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L2y-OS-83b">
+                                            <rect key="frame" x="59" y="0.0" width="295.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="rectangle.portrait.and.arrow.right" catalog="system" id="e3z-MX-1C8">
+                                            <rect key="frame" x="20.166666666666664" y="11.666666666666664" width="23.666666666666668" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="GY6-aR-2JY" kind="show" identifier="id2" id="r5n-uK-lYY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eQC-0T-d0b" id="xn7-Cn-5E0"/>
+                            <outlet property="delegate" destination="eQC-0T-d0b" id="1cT-1l-smR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ec6-El-l2n"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfs-y9-62t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="-1015"/>
+        </scene>
+        <!--5x5-->
+        <scene sceneID="7Lg-Uk-TlB">
+            <objects>
+                <navigationController title="5x5" id="4wZ-Ma-wLt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="5x5" image="list.bullet.clipboard.fill" catalog="system" selectedImage="list.bullet.clipboard.fill" id="X5l-d2-g3a"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9nb-Ds-hDj">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2bR-he-buf" kind="relationship" relationship="rootViewController" id="c2l-de-Lfe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQQ-u8-xue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251" y="-1015"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6fo-Hb-sJz">
+            <objects>
+                <tabBarController id="f4u-SW-EhF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uIT-wv-RKx"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A08-5I-gm1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rWo-Jk-XSP" kind="relationship" relationship="viewControllers" id="xC8-KO-4Nv"/>
+                        <segue destination="4wZ-Ma-wLt" kind="relationship" relationship="viewControllers" id="cIR-3u-zee"/>
+                        <segue destination="aGq-ib-mEN" kind="relationship" relationship="viewControllers" id="9YK-JL-M1n"/>
+                        <segue destination="syd-RM-0Q1" kind="relationship" relationship="viewControllers" id="Aec-Yh-RoT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyE-1n-fl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1393" y="-298"/>
+        </scene>
+        <!--6x6-->
+        <scene sceneID="Suj-fR-y8e">
+            <objects>
+                <tableViewController title="6x6" id="ZsH-PY-A1e" customClass="MyTableViewController" customModule="Calcudoku_Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Y1u-5v-bct">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="linkColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="first" textLabel="SWJ-Is-dky" imageView="wNL-Pm-WH0" style="IBUITableViewCellStyleDefault" id="fVN-yV-hr4">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fVN-yV-hr4" id="NSH-mi-7WL">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SWJ-Is-dky">
+                                            <rect key="frame" x="59" y="0.0" width="295.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="rectangle.portrait.and.arrow.right" catalog="system" id="wNL-Pm-WH0">
+                                            <rect key="frame" x="20.166666666666664" y="11.666666666666664" width="23.666666666666668" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="eQC-0T-d0b" kind="show" identifier="id1" id="Nwm-wk-fJZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZsH-PY-A1e" id="XhI-2u-qbp"/>
+                            <outlet property="delegate" destination="ZsH-PY-A1e" id="chz-5f-7pm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Calcudoku" id="cOI-Fe-Fz2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ptf-3c-5H3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="-225"/>
+        </scene>
+        <!--6x6-->
+        <scene sceneID="mnA-L3-n8L">
+            <objects>
+                <navigationController title="6x6" id="aGq-ib-mEN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="6x6" image="list.bullet.clipboard" catalog="system" selectedImage="list.bullet.clipboard" id="rkh-TE-adG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jFe-QF-lu6">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZsH-PY-A1e" kind="relationship" relationship="rootViewController" id="jKY-nC-bA1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCu-7i-djQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227" y="-225"/>
+        </scene>
+        <!--4x4-->
+        <scene sceneID="8OR-ru-1cX">
+            <objects>
+                <tableViewController title="4x4" id="ubf-46-eO5" customClass="MyTableViewController" customModule="Calcudoku_Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="hsx-PI-wYU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="linkColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="first" textLabel="hy5-no-5BW" imageView="kN1-V2-UQc" style="IBUITableViewCellStyleDefault" id="uom-Px-Laz">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uom-Px-Laz" id="13l-lX-cie">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hy5-no-5BW">
+                                            <rect key="frame" x="59" y="0.0" width="295.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="rectangle.portrait.and.arrow.right" catalog="system" id="kN1-V2-UQc">
+                                            <rect key="frame" x="20.166666666666664" y="11.666666666666664" width="23.666666666666668" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="eQC-0T-d0b" kind="show" identifier="id1" id="EvB-uE-XW3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ubf-46-eO5" id="Tvm-b4-ITN"/>
+                            <outlet property="delegate" destination="ubf-46-eO5" id="Sfg-Wl-pgO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Calcudoku" id="nL1-EY-wE4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Upz-D1-oWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-1728"/>
+        </scene>
+        <!--4x4-->
+        <scene sceneID="D44-PZ-YTJ">
+            <objects>
+                <navigationController title="4x4" id="rWo-Jk-XSP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="4x4" image="list.clipboard" catalog="system" selectedImage="list.clipboard" id="151-8k-19A"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIJ-SI-nbG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ubf-46-eO5" kind="relationship" relationship="rootViewController" id="xlU-3B-3bL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNv-sx-kto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251" y="-1728"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="yji-iH-8k0">
+            <objects>
+                <viewController id="GY6-aR-2JY" customClass="WebViewController" customModule="Calcudoku_Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qfd-Is-dH6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSo-gU-d06">
+                                <rect key="frame" x="159" y="465" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="9e0-zv-4Ik" kind="show" identifier="id1" id="vmY-Ql-dBe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1xP-pX-fsK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zMa-HE-jhN"/>
+                    <connections>
+                        <outlet property="button" destination="zSo-gU-d06" id="QlC-8Y-5eo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOp-br-oz8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371.7557251908397" y="-1015.492957746479"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="kQG-Yp-IV3">
+            <objects>
+                <viewController id="9e0-zv-4Ik" customClass="GameViewController" customModule="Calcudoku_Collection_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nar-7P-cgB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ViM-w2-k8O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="l7E-H8-saf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXY-9c-fDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3509" y="-1015"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nwm-wk-fJZ"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="eyes" catalog="system" width="128" height="99"/>
+        <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
+        <image name="list.bullet.clipboard.fill" catalog="system" width="98" height="128"/>
+        <image name="list.clipboard" catalog="system" width="98" height="128"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

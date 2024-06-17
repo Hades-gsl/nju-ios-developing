@@ -1,0 +1,8 @@
+framework module "Scrape" {
+	header "ref.h"
+    header "Scrape.objc.h"
+    header "Universe.objc.h"
+    header "Scrape.h"
+
+    export *
+}
